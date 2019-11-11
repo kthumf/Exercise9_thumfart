@@ -1,0 +1,7 @@
+names	type	condition
+WT-Chir-1_R1	SE	WT__chir
+WT-Chir-2_R1	SE	WT__chir
+WT-Chir-3_R1	SE	WT__chir
+WT-unstim-1_R1	SE	WT__unstim
+WT-unstim-2_R1	SE	WT__unstim
+WT-unstim-3_R1	SE	WT__unstim
