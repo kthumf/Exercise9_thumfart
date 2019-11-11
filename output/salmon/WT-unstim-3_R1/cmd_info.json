@@ -1,0 +1,13 @@
+{
+    "salmon_version": "0.10.2",
+    "index": "example_dataset/reference/SalmonIndex/Homo_sapiens.GRCh38.93_0.8.2",
+    "libType": "A",
+    "unmatedReads": "example_dataset/output/FASTQtrimmed/WT-unstim-3_R1_trimmed.fq.gz",
+    "output": "example_dataset/output/salmon/WT-unstim-3_R1",
+    "seqBias": [],
+    "gcBias": [],
+    "fldMean": "250",
+    "fldSD": "25",
+    "threads": "1",
+    "auxDir": "aux_info"
+}

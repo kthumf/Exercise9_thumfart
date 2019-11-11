@@ -1,0 +1,120 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: example_dataset/FASTQ/WT-Chir-1_R1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.6.4
+Cutadapt version: 2.6
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Nextera adapter for trimming (count: 157). Second best hit was smallRNA (count: 139)
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 2.6 with Python 3.6.8
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA example_dataset/FASTQ/WT-Chir-1_R1.fastq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 15.28 s (24 us/read; 2.49 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 635,001
+Reads with adapters:                   320,541 (50.5%)
+Reads written (passing filters):       635,001 (100.0%)
+
+Total basepairs processed:    47,350,475 bp
+Quality-trimmed:                  76,514 bp (0.2%)
+Total written (filtered):     46,824,148 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 320541 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 19.2%
+  C: 30.7%
+  G: 26.2%
+  T: 23.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	241477	158750.2	0	241477
+2	49355	39687.6	0	49355
+3	23429	9921.9	0	23429
+4	4293	2480.5	0	4293
+5	1212	620.1	0	1212
+6	272	155.0	0	272
+7	147	38.8	0	147
+8	41	9.7	0	41
+9	20	2.4	0	8 12
+10	10	0.6	1	1 9
+11	7	0.2	1	4 3
+12	1	0.0	1	1
+13	11	0.0	1	10 1
+14	2	0.0	1	1 1
+15	3	0.0	1	1 2
+16	12	0.0	1	12
+17	7	0.0	1	6 1
+18	4	0.0	1	0 4
+19	5	0.0	1	2 3
+20	9	0.0	1	9
+21	1	0.0	1	1
+22	15	0.0	1	11 4
+23	2	0.0	1	0 2
+24	3	0.0	1	0 3
+25	3	0.0	1	1 2
+26	2	0.0	1	0 2
+27	1	0.0	1	0 1
+28	4	0.0	1	3 1
+29	5	0.0	1	4 1
+31	2	0.0	1	2
+32	4	0.0	1	3 1
+33	3	0.0	1	2 1
+35	3	0.0	1	3
+37	4	0.0	1	3 1
+38	1	0.0	1	0 1
+39	5	0.0	1	4 1
+41	2	0.0	1	0 2
+42	5	0.0	1	0 5
+44	3	0.0	1	2 1
+46	2	0.0	1	0 2
+47	2	0.0	1	0 2
+49	1	0.0	1	0 1
+50	19	0.0	1	10 9
+51	7	0.0	1	5 2
+52	3	0.0	1	3
+53	2	0.0	1	2
+54	4	0.0	1	1 3
+56	12	0.0	1	1 11
+57	10	0.0	1	6 4
+58	2	0.0	1	0 2
+60	7	0.0	1	4 3
+61	1	0.0	1	0 1
+62	3	0.0	1	0 3
+63	6	0.0	1	3 3
+64	3	0.0	1	0 3
+65	2	0.0	1	0 2
+67	3	0.0	1	2 1
+68	10	0.0	1	0 10
+69	2	0.0	1	1 1
+70	2	0.0	1	0 2
+71	9	0.0	1	3 6
+72	4	0.0	1	2 2
+73	5	0.0	1	2 3
+74	25	0.0	1	21 4
+75	10	0.0	1	10
+
+RUN STATISTICS FOR INPUT FILE: example_dataset/FASTQ/WT-Chir-1_R1.fastq.gz
+=============================================
+635001 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	118 (0.0%)
+

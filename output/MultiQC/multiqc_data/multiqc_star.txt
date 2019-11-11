@@ -1,0 +1,7 @@
+Sample	total_reads	avg_input_read_length	uniquely_mapped	uniquely_mapped_percent	avg_mapped_read_length	num_splices	num_annotated_splices	num_GTAG_splices	num_GCAG_splices	num_ATAC_splices	num_noncanonical_splices	mismatch_rate	deletion_rate	deletion_length	insertion_rate	insertion_length	multimapped	multimapped_percent	multimapped_toomany	multimapped_toomany_percent	unmapped_mismatches_percent	unmapped_tooshort_percent	unmapped_other_percent	unmapped_mismatches	unmapped_tooshort	unmapped_other
+WT-Chir-1_R1	634883.0	73.0	633518.0	99.78	73.58	155837.0	154075.0	155294.0	405.0	15.0	123.0	0.23	0.01	1.52	0.0	1.26	1316.0	0.21	17.0	0.0	0.0	0.01	0.0	0	32	0
+WT-Chir-2_R1	519186.0	73.0	518059.0	99.78	73.57	129327.0	127881.0	128849.0	320.0	9.0	149.0	0.23	0.01	1.53	0.0	1.21	1072.0	0.21	14.0	0.0	0.0	0.01	0.0	0	41	0
+WT-Chir-3_R1	727594.0	73.0	726068.0	99.79	73.6	178955.0	176766.0	178324.0	439.0	15.0	177.0	0.22	0.01	1.5	0.0	1.22	1444.0	0.2	21.0	0.0	0.0	0.01	0.0	0	61	0
+WT-unstim-1_R1	497174.0	73.0	496159.0	99.8	73.68	124378.0	123037.0	123988.0	266.0	17.0	107.0	0.24	0.01	1.51	0.0	1.21	965.0	0.19	10.0	0.0	0.0	0.01	0.0	0	40	0
+WT-unstim-2_R1	582525.0	73.0	581223.0	99.78	73.57	136974.0	135254.0	136501.0	302.0	17.0	154.0	0.25	0.01	1.53	0.0	1.19	1250.0	0.21	19.0	0.0	0.0	0.01	0.0	0	33	0
+WT-unstim-3_R1	316446.0	73.0	315683.0	99.76	73.58	76922.0	76101.0	76638.0	190.0	14.0	80.0	0.23	0.01	1.51	0.0	1.24	720.0	0.23	16.0	0.01	0.0	0.01	0.0	0	27	0

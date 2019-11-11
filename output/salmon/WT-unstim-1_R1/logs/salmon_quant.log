@@ -1,0 +1,43 @@
+[2019-11-11 11:27:20.456] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2019-11-11 11:27:20.456] [jointLog] [info] parsing read library format
+[2019-11-11 11:27:20.456] [jointLog] [info] There is 1 library.
+[2019-11-11 11:27:20.519] [jointLog] [info] Loading Quasi index
+[2019-11-11 11:27:20.519] [jointLog] [info] Loading 32-bit quasi index
+[2019-11-11 11:27:20.533] [jointLog] [info] done
+[2019-11-11 11:27:20.533] [jointLog] [info] Index contained 3855 targets
+[2019-11-11 11:27:20.538] [jointLog] [warning] Fragment GC bias correction is currently *experimental* in single-end libraries.  Please use this option with caution.
+[2019-11-11 11:27:22.997] [fileLog] [info] 
+At end of round 0
+==================
+Observed 497174 total fragments (497174 in most recent round)
+
+[2019-11-11 11:27:22.996] [jointLog] [info] Computed 801 rich equivalence classes for further processing
+[2019-11-11 11:27:22.996] [jointLog] [info] Counted 19541 total reads in the equivalence classes 
+[2019-11-11 11:27:22.997] [jointLog] [warning] 0.00784434% of fragments were shorter than the k used to build the index (31).
+If this fraction is too large, consider re-building the index with a smaller k.
+The minimum read size found was 20.
+
+
+[2019-11-11 11:27:22.998] [jointLog] [warning] Only 19541 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2019-11-11 11:27:22.998] [jointLog] [info] Mapping rate = 3.93041%
+
+[2019-11-11 11:27:22.998] [jointLog] [info] finished quantifyLibrary()
+[2019-11-11 11:27:22.998] [jointLog] [info] Starting optimizer
+[2019-11-11 11:27:22.999] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2019-11-11 11:27:22.999] [jointLog] [info] iteration = 0 | max rel diff. = 0.999986
+[2019-11-11 11:27:23.000] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2019-11-11 11:27:23.000] [jointLog] [info] Computed expected counts (for bias correction)
+[2019-11-11 11:27:23.000] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2019-11-11 11:27:23.003] [jointLog] [info] iteration = 100 | max rel diff. = 0.0217391
+[2019-11-11 11:27:23.007] [jointLog] [info] iteration = 200 | max rel diff. = 0.0217391
+[2019-11-11 11:27:23.010] [jointLog] [info] iteration = 300 | max rel diff. = 0.0217391
+[2019-11-11 11:27:23.011] [jointLog] [info] iteration = 361 | max rel diff. = 4.62299e-06
+[2019-11-11 11:27:23.011] [jointLog] [info] Finished optimizer
+[2019-11-11 11:27:23.011] [jointLog] [info] writing output 
+
+[2019-11-11 11:27:23.015] [jointLog] [warning] NOTE: Read Lib [example_dataset/output/FASTQtrimmed/WT-unstim-1_R1_trimmed.fq.gz] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: example_dataset/output/salmon/WT-unstim-1_R1/lib_format_counts.json for details
+

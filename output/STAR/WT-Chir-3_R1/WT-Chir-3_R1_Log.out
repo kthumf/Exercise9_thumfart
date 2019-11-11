@@ -1,0 +1,135 @@
+STAR version=2.7.3a
+STAR compilation time,server,dir=Tue Oct 8 14:26:19 EDT 2019 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+##### Command Line:
+STAR --genomeDir example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx --readFilesIn example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz --runThreadN 1 --outFileNamePrefix example_dataset/output/STAR/WT-Chir-3_R1/WT-Chir-3_R1_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 example_dataset/output/STAR/WT-Chir-3_R1/WT-Chir-3_R1_
+###### All USER parameters from Command Line:
+genomeDir                     example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx     ~RE-DEFINED
+readFilesIn                   example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz        ~RE-DEFINED
+runThreadN                    1     ~RE-DEFINED
+outFileNamePrefix             example_dataset/output/STAR/WT-Chir-3_R1/WT-Chir-3_R1_     ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+readFilesCommand              gunzip   -c        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        1
+genomeDir                         example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx
+readFilesIn                       example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz   
+readFilesCommand                  gunzip   -c   
+outFileNamePrefix                 example_dataset/output/STAR/WT-Chir-3_R1/WT-Chir-3_R1_
+outSAMtype                        BAM   SortedByCoordinate   
+
+-------------------------------
+##### Final effective command line:
+STAR   --runThreadN 1   --genomeDir example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx   --readFilesIn example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz      --readFilesCommand gunzip   -c      --outFileNamePrefix example_dataset/output/STAR/WT-Chir-3_R1/WT-Chir-3_R1_   --outSAMtype BAM   SortedByCoordinate   
+----------------------------------------
+
+
+   Input read files for mate 1, from input string example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz
+-rw-r--r-- 1 rstudio rstudio 18343924 Nov 11 11:20 example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz
+
+   readsCommandsFile:
+exec > "example_dataset/output/STAR/WT-Chir-3_R1/WT-Chir-3_R1__STARtmp/tmp.fifo.read1"
+echo FILE 0
+gunzip   -c      "example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz"
+
+WARNING: --limitBAMsortRAM=0, will use genome size as RAM limit for BAM sorting
+Finished loading and checking parameters
+Reading genome generation parameters:
+### STAR   --runMode genomeGenerate   --runThreadN 1   --genomeDir example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx   --genomeFastaFiles example_dataset/reference/Homo_sapiens.GRCh38.dna.chromosome.22.fa      --sjdbGTFfile example_dataset/reference/Homo_sapiens.GRCh38.98.chr22.gtf   --sjdbOverhang 63
+### GstrandBit=32
+versionGenome                 2.7.1a     ~RE-DEFINED
+genomeFastaFiles              example_dataset/reference/Homo_sapiens.GRCh38.dna.chromosome.22.fa        ~RE-DEFINED
+genomeSAindexNbases           14     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+sjdbOverhang                  63     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   example_dataset/reference/Homo_sapiens.GRCh38.98.chr22.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               51885779   331497469        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 1
+1	22	50818468	0
+--sjdbOverhang = 63 taken from the generated genome
+Started loading the genome: Mon Nov 11 11:20:06 2019
+
+Genome: size given as a parameter = 51885779
+SA: size given as a parameter = 331497469
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=14  nSAi=357913940
+nGenome=51885779;  nSAbyte=331497469
+GstrandBit=32   SA number of indices=80363022
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 51885779 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 51885779 bytes
+SA file size: 331497469 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 331497469 bytes
+Loading SAindex ... done: 1565873619 bytes
+Finished loading the genome: Mon Nov 11 11:20:22 2019
+
+Processing splice junctions database sjdbN=8109,   pGe.sjdbOverhang=63 
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Starting to map file # 0
+mate 1:   example_dataset/output/FASTQtrimmed/WT-Chir-3_R1_trimmed.fq.gz
+BAM sorting: 274697 mapped reads
+BAM sorting bins genomic start loci:
+1	0	17548438
+2	0	17733313
+3	0	18089046
+4	0	19041876
+5	0	19210403
+6	0	19435932
+7	0	19508529
+8	0	19883323
+9	0	20108929
+10	0	20119111
+11	0	20126966
+12	0	20397754
+13	0	20586666
+14	0	20870470
+15	0	20952083
+16	0	20999956
+17	0	21622009
+18	0	21682454
+19	0	21764112
+20	0	21968646
+21	0	22549363
+22	0	23314579
+23	0	23767424
+24	0	23894519
+25	0	23894927
+26	0	24067084
+27	0	24414540
+28	0	24557726
+29	0	24573738
+30	0	25460883
+31	0	26488029
+32	0	27852008
+33	0	27998123
+34	0	28788283
+35	0	29050100
+36	0	29282480
+37	0	29297851
+38	0	29328836
+39	0	29528110
+40	0	29767459
+41	0	30007224
+42	0	30338827
+43	0	30428792
+44	0	30654541
+45	0	30975285
+46	0	31192694
+47	0	31420422
+48	0	31619558
+Thread #0 end of input stream, nextChar=-1
+Completed: thread #0
+Nov 11 11:20:51 ..... started sorting BAM
+Max memory needed for sorting = 112128907
+ALL DONE!

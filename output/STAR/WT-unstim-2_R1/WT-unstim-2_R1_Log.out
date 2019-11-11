@@ -1,0 +1,135 @@
+STAR version=2.7.3a
+STAR compilation time,server,dir=Tue Oct 8 14:26:19 EDT 2019 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+##### Command Line:
+STAR --genomeDir example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx --readFilesIn example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz --runThreadN 1 --outFileNamePrefix example_dataset/output/STAR/WT-unstim-2_R1/WT-unstim-2_R1_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 example_dataset/output/STAR/WT-unstim-2_R1/WT-unstim-2_R1_
+###### All USER parameters from Command Line:
+genomeDir                     example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx     ~RE-DEFINED
+readFilesIn                   example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz        ~RE-DEFINED
+runThreadN                    1     ~RE-DEFINED
+outFileNamePrefix             example_dataset/output/STAR/WT-unstim-2_R1/WT-unstim-2_R1_     ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+readFilesCommand              gunzip   -c        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        1
+genomeDir                         example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx
+readFilesIn                       example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz   
+readFilesCommand                  gunzip   -c   
+outFileNamePrefix                 example_dataset/output/STAR/WT-unstim-2_R1/WT-unstim-2_R1_
+outSAMtype                        BAM   SortedByCoordinate   
+
+-------------------------------
+##### Final effective command line:
+STAR   --runThreadN 1   --genomeDir example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx   --readFilesIn example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz      --readFilesCommand gunzip   -c      --outFileNamePrefix example_dataset/output/STAR/WT-unstim-2_R1/WT-unstim-2_R1_   --outSAMtype BAM   SortedByCoordinate   
+----------------------------------------
+
+
+   Input read files for mate 1, from input string example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz
+-rw-r--r-- 1 rstudio rstudio 15283347 Nov 11 11:22 example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz
+
+   readsCommandsFile:
+exec > "example_dataset/output/STAR/WT-unstim-2_R1/WT-unstim-2_R1__STARtmp/tmp.fifo.read1"
+echo FILE 0
+gunzip   -c      "example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz"
+
+WARNING: --limitBAMsortRAM=0, will use genome size as RAM limit for BAM sorting
+Finished loading and checking parameters
+Reading genome generation parameters:
+### STAR   --runMode genomeGenerate   --runThreadN 1   --genomeDir example_dataset/reference/STARIndex/Homo_sapiens.GRCh38.93.STAR.idx   --genomeFastaFiles example_dataset/reference/Homo_sapiens.GRCh38.dna.chromosome.22.fa      --sjdbGTFfile example_dataset/reference/Homo_sapiens.GRCh38.98.chr22.gtf   --sjdbOverhang 63
+### GstrandBit=32
+versionGenome                 2.7.1a     ~RE-DEFINED
+genomeFastaFiles              example_dataset/reference/Homo_sapiens.GRCh38.dna.chromosome.22.fa        ~RE-DEFINED
+genomeSAindexNbases           14     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+sjdbOverhang                  63     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   example_dataset/reference/Homo_sapiens.GRCh38.98.chr22.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               51885779   331497469        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 1
+1	22	50818468	0
+--sjdbOverhang = 63 taken from the generated genome
+Started loading the genome: Mon Nov 11 11:22:36 2019
+
+Genome: size given as a parameter = 51885779
+SA: size given as a parameter = 331497469
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=14  nSAi=357913940
+nGenome=51885779;  nSAbyte=331497469
+GstrandBit=32   SA number of indices=80363022
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 51885779 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 51885779 bytes
+SA file size: 331497469 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 331497469 bytes
+Loading SAindex ... done: 1565873619 bytes
+Finished loading the genome: Mon Nov 11 11:22:41 2019
+
+Processing splice junctions database sjdbN=8109,   pGe.sjdbOverhang=63 
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Starting to map file # 0
+mate 1:   example_dataset/output/FASTQtrimmed/WT-unstim-2_R1_trimmed.fq.gz
+BAM sorting: 274755 mapped reads
+BAM sorting bins genomic start loci:
+1	0	17591041
+2	0	17793604
+3	0	19036336
+4	0	19176194
+5	0	19435669
+6	0	19723251
+7	0	20048311
+8	0	20122335
+9	0	20145956
+10	0	20585003
+11	0	20811029
+12	0	20951981
+13	0	21006991
+14	0	21623422
+15	0	21761372
+16	0	21922948
+17	0	22548173
+18	0	23315659
+19	0	23822004
+20	0	23895048
+21	0	24166840
+22	0	24432241
+23	0	24572856
+24	0	25520229
+25	0	26496997
+26	0	27860131
+27	0	28786722
+28	0	29137447
+29	0	29288690
+30	0	29299751
+31	0	29354722
+32	0	29695334
+33	0	30012468
+34	0	30340809
+35	0	30587318
+36	0	30973567
+37	0	31205286
+38	0	31439582
+39	0	31713832
+40	0	32387711
+41	0	32498367
+42	0	35393867
+43	0	35741048
+44	0	36284225
+45	0	36312123
+46	0	36489803
+47	0	36518825
+48	0	37062032
+Thread #0 end of input stream, nextChar=-1
+Completed: thread #0
+Nov 11 11:23:14 ..... started sorting BAM
+Max memory needed for sorting = 76712719
+ALL DONE!

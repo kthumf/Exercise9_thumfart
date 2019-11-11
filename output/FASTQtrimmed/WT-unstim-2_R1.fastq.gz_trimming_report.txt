@@ -1,0 +1,114 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: example_dataset/FASTQ/WT-unstim-2_R1.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.6.4
+Cutadapt version: 2.6
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Nextera adapter for trimming (count: 179). Second best hit was smallRNA (count: 172)
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 2.6 with Python 3.6.8
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA example_dataset/FASTQ/WT-unstim-2_R1.fastq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 11.23 s (19 us/read; 3.11 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 582,641
+Reads with adapters:                   292,114 (50.1%)
+Reads written (passing filters):       582,641 (100.0%)
+
+Total basepairs processed:    43,445,913 bp
+Quality-trimmed:                  73,788 bp (0.2%)
+Total written (filtered):     42,960,311 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 292114 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 19.3%
+  C: 30.4%
+  G: 26.4%
+  T: 23.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	219530	145660.2	0	219530
+2	45070	36415.1	0	45070
+3	21736	9103.8	0	21736
+4	3923	2275.9	0	3923
+5	1142	569.0	0	1142
+6	207	142.2	0	207
+7	139	35.6	0	139
+8	52	8.9	0	52
+9	25	2.2	0	12 13
+10	11	0.6	1	2 9
+11	10	0.1	1	4 6
+13	9	0.0	1	8 1
+15	3	0.0	1	1 2
+16	10	0.0	1	10
+17	13	0.0	1	13
+18	3	0.0	1	0 3
+19	4	0.0	1	0 4
+20	10	0.0	1	9 1
+21	3	0.0	1	3
+22	11	0.0	1	3 8
+23	2	0.0	1	0 2
+24	1	0.0	1	0 1
+25	6	0.0	1	6
+27	2	0.0	1	1 1
+28	10	0.0	1	8 2
+29	8	0.0	1	8
+31	3	0.0	1	2 1
+32	5	0.0	1	4 1
+33	2	0.0	1	2
+37	2	0.0	1	2
+39	2	0.0	1	2
+42	7	0.0	1	0 7
+43	1	0.0	1	0 1
+44	2	0.0	1	2
+49	5	0.0	1	5
+50	6	0.0	1	2 4
+51	5	0.0	1	4 1
+52	13	0.0	1	12 1
+53	1	0.0	1	1
+54	7	0.0	1	5 2
+56	7	0.0	1	0 7
+57	11	0.0	1	10 1
+58	2	0.0	1	0 2
+59	2	0.0	1	0 2
+60	3	0.0	1	3
+61	4	0.0	1	0 4
+62	2	0.0	1	0 2
+63	2	0.0	1	2
+64	2	0.0	1	0 2
+65	1	0.0	1	0 1
+66	1	0.0	1	1
+67	5	0.0	1	3 2
+68	7	0.0	1	1 6
+70	3	0.0	1	0 3
+71	10	0.0	1	4 6
+72	3	0.0	1	3
+73	1	0.0	1	1
+74	40	0.0	1	31 9
+75	7	0.0	1	7
+
+RUN STATISTICS FOR INPUT FILE: example_dataset/FASTQ/WT-unstim-2_R1.fastq.gz
+=============================================
+582641 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	116 (0.0%)
+

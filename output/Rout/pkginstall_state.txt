@@ -1,0 +1,2 @@
+packages loaded successfully: 
+ dplyr ggplot2 tidyr remotes limma edgeR S4Vectors DRIMSeq SingleCellExperiment tximeta msigdbr

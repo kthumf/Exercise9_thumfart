@@ -1,0 +1,123 @@
+
+R version 3.6.0 (2019-04-26) -- "Planting of a Tree"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Bioconductor version 3.9 (BiocManager 1.30.9), ?BiocManager::install for help
+> args <- (commandArgs(trailingOnly = TRUE))
+> for (i in seq_len(length(args))) {
++     eval(parse(text = args[[i]]))
++ }
+> 
+> suppressPackageStartupMessages({
++     library(tximeta)
++ })
+> 
+> print(transcriptfasta)
+[1] "example_dataset/reference/Homo_sapiens.GRCh38.cdna.all.chr22.fa.gz"
+> print(salmonidx)
+[1] "example_dataset/reference/SalmonIndex/Homo_sapiens.GRCh38.93_0.8.2/hash.bin"
+> print(gtf)
+[1] "example_dataset/reference/Homo_sapiens.GRCh38.98.chr22.gtf"
+> 
+> print(annotation)
+[1] "Ensembl"
+> ss <- strsplit(organism, "_")[[1]]
+> organism <- paste(paste(ss[1], ss[2]))
+> print(organism)
+[1] "Homo sapiens"
+> print(release)
+[1] "93"
+> print(build)
+[1] "GRCh38"
+> print(output)
+[1] "example_dataset/reference/SalmonIndex/Homo_sapiens.GRCh38.93_0.8.2.json"
+> 
+> makeLinkedTxome(indexDir = dirname(salmonidx),
++                 source = annotation,
++                 organism = organism,
++                 release = release,
++                 genome = build,
++                 fasta = transcriptfasta,
++                 gtf = gtf,
++                 write = TRUE, 
++                 jsonFile = output)
+writing linkedTxome to example_dataset/reference/SalmonIndex/Homo_sapiens.GRCh38.93_0.8.2.json
+saving linkedTxome in bfc (first time)
+> 
+> sessionInfo()
+R version 3.6.0 (2019-04-26)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Debian GNU/Linux 9 (stretch)
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=C             
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] tximeta_1.2.2      BiocManager_1.30.9
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.2                  lattice_0.20-38            
+ [3] prettyunits_1.0.2           Rsamtools_2.0.3            
+ [5] Biostrings_2.52.0           assertthat_0.2.1           
+ [7] zeallot_0.1.0               digest_0.6.22              
+ [9] BiocFileCache_1.8.0         R6_2.4.0                   
+[11] GenomeInfoDb_1.20.0         backports_1.1.5            
+[13] stats4_3.6.0                RSQLite_2.1.2              
+[15] httr_1.4.1                  pillar_1.4.2               
+[17] zlibbioc_1.30.0             rlang_0.4.1                
+[19] GenomicFeatures_1.36.4      progress_1.2.2             
+[21] lazyeval_0.2.2              curl_4.2                   
+[23] blob_1.2.0                  S4Vectors_0.22.1           
+[25] Matrix_1.2-17               BiocParallel_1.18.1        
+[27] stringr_1.4.0               ProtGenerics_1.16.0        
+[29] RCurl_1.95-4.12             bit_1.1-14                 
+[31] biomaRt_2.40.5              DelayedArray_0.10.0        
+[33] compiler_3.6.0              rtracklayer_1.44.4         
+[35] pkgconfig_2.0.3             BiocGenerics_0.30.0        
+[37] tximport_1.12.3             tidyselect_0.2.5           
+[39] SummarizedExperiment_1.14.1 tibble_2.1.3               
+[41] GenomeInfoDbData_1.2.1      IRanges_2.18.3             
+[43] matrixStats_0.55.0          XML_3.98-1.20              
+[45] crayon_1.3.4                dplyr_0.8.3                
+[47] dbplyr_1.4.2                GenomicAlignments_1.20.1   
+[49] bitops_1.0-6                rappdirs_0.3.1             
+[51] grid_3.6.0                  jsonlite_1.6               
+[53] DBI_1.0.0                   AnnotationFilter_1.8.0     
+[55] magrittr_1.5                stringi_1.4.3              
+[57] XVector_0.24.0              vctrs_0.2.0                
+[59] ensembldb_2.8.1             tools_3.6.0                
+[61] bit64_0.9-7                 Biobase_2.44.0             
+[63] glue_1.3.1                  purrr_0.3.3                
+[65] hms_0.5.2                   parallel_3.6.0             
+[67] AnnotationDbi_1.46.1        GenomicRanges_1.36.1       
+[69] memoise_1.1.0              
+> date()
+[1] "Mon Nov 11 11:27:02 2019"
+> 
+> proc.time()
+   user  system elapsed 
+ 10.190   1.970  12.194 

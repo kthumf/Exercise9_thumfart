@@ -1,0 +1,97 @@
+
+R version 3.6.0 (2019-04-26) -- "Planting of a Tree"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Bioconductor version 3.9 (BiocManager 1.30.9), ?BiocManager::install for help
+> args <- (commandArgs(trailingOnly = TRUE))
+> for (i in seq_len(length(args))) {
++     eval(parse(text = args[[i]]))
++ }
+> 
+> ## Mandatory arguments
+> print(se)
+[1] "example_dataset/output/outputR/tximeta_se.rds"
+> print(rmdtemplate)
+[1] "scripts/edgeR_dge.Rmd"
+> print(outputdir)
+[1] "example_dataset/output/outputR"
+> print(outputfile)
+[1] "edgeR_dge.html"
+> 
+> ## Arguments that are only used for some of the reports
+> if (exists("organism")) {
++     print(organism)
++ } else {
++     organism <- NULL
++ }
+[1] "Homo_sapiens"
+> 
+> if (exists("design")) {
++     print(design)
++ } else {
++     design <- NULL
++ }
+[1] "~0+condition"
+> 
+> if (exists("contrast")) {
++     contrast <- strsplit(gsub(" ","",contrast), ",")[[1]]
++     print(contrast)
++ } else {
++     contrast <- NULL
++ }
+[1] "conditionWT__chir-conditionWT__unstim"
+> 
+> if (exists("genesets")) {
++     genesets <- strsplit(gsub(" ","",genesets), ",")[[1]]
++     print(genesets)
++ } else {
++     genesets <- NULL
++ }
+[1] "H"  "C5"
+> 
+> if (exists("gtffile")) {
++     print(gtffile)
++ } else {
++     gtffile <- NULL
++ }
+> 
+> if (exists("ncores")) {
++     ncores <- as.numeric(ncores)
++     if(is.na(ncores))
++         ncores <- 1
++     print(ncores)
++ } else {
++     ncores <- 1
++ }
+> 
+> if (exists("bigwigdir")) {
++     bigwigdir <- normalizePath(bigwigdir)
++     print(bigwigdir)
++ } else {
++     bigwigdir <- NULL
++ }
+> 
+> source("scripts/generate_report.R")
+> 
+> generateReport(se = se, organism = organism, gtffile = gtffile,
++                contrast = contrast, design = design, genesets = genesets, 
++                bigwigdir = bigwigdir, rmdTemplate = rmdtemplate, 
++                outputDir = outputdir, outputFile = outputfile, ncores = ncores,
++                forceOverwrite = TRUE, showCode = TRUE)
+> 
+> proc.time()
+   user  system elapsed 
+  19.64    1.87   23.01 

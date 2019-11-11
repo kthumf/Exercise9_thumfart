@@ -1,0 +1,198 @@
+
+R version 3.6.0 (2019-04-26) -- "Planting of a Tree"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Bioconductor version 3.9 (BiocManager 1.30.9), ?BiocManager::install for help
+> args <- (commandArgs(trailingOnly = TRUE))
+> for (i in seq_len(length(args))) {
++     eval(parse(text = args[[i]]))
++ }
+> 
+> suppressPackageStartupMessages({
++     library(dplyr)
++     library(tximport)
++     library(tximeta)
++     library(SingleCellExperiment)
++ })
+> 
+> print(salmondir)
+[1] "example_dataset/output/salmon"
+> print(json)
+[1] "example_dataset/reference/SalmonIndex/Homo_sapiens.GRCh38.93_0.8.2.json"
+> print(metafile)
+[1] "example_dataset/metadata.txt"
+> print(outrds)
+[1] "example_dataset/output/outputR/tximeta_se.rds"
+> print(annotation)
+[1] "Ensembl"
+> print(organism)
+[1] "Homo_sapiens"
+> 
+> ## Load json linkedTxome
+> loadLinkedTxome(json)
+saving linkedTxome in bfc (first time)
+> 
+> ## Read metadata
+> metadata <- read.delim(metafile, header = TRUE, as.is = TRUE, sep = "\t")
+> 
+> ## List Salmon directories
+> salmonfiles <- paste0(salmondir, "/", metadata$names, "/quant.sf")
+> names(salmonfiles) <- metadata$names
+> 
+> ## Add file column to metadata and import annotated abundances
+> ## In transcript level
+> coldata <- cbind(metadata, files = salmonfiles, stringsAsFactors = FALSE)
+> st <- tximeta::tximeta(coldata)
+importing quantifications
+reading in files with read_tsv
+1 2 3 4 5 6 
+found matching linked transcriptome:
+[ Ensembl - Homo sapiens - release 93 ]
+building EnsDb with 'ensembldb' package
+Importing GTF file ... OK
+Processing metadata ... OK
+Processing genes ... 
+ Attribute availability:
+  o gene_id ... OK
+  o gene_name ... OK
+  o entrezid ... Nope
+  o gene_biotype ... OK
+OK
+Processing transcripts ... 
+ Attribute availability:
+  o transcript_id ... OK
+  o gene_id ... OK
+  o transcript_biotype ... OK
+OK
+Processing exons ... OK
+Processing chromosomes ... Fetch seqlengths from ensembl ... OK
+Generating index ... OK
+  -------------
+Verifying validity of the information in the database:
+Checking transcripts ... OK
+Checking exons ... OK
+generating transcript ranges
+> 
+> ## Summarize to gene level
+> sg <- summarizeToGene(st)
+loading existing EnsDb created: 2019-11-11 11:27:55
+obtaining transcript-to-gene mapping from TxDb
+summarizing abundance
+summarizing counts
+summarizing length
+> 
+> ## Add gene_names for Gencode reference
+> if(annotation == "Gencode") {
++     if(organism == "Homo_sapiens") {
++         library(org.Hs.eg.db)
++     } else {
++         library(org.Mm.eg.db)
++     }
++     sg <- tximeta::addIds(sg, "SYMBOL", gene = TRUE)
++     rowData(sg)$gene_name <- rowData(sg)$SYMBOL
++ }
+> 
+> ## If rowData(st)$gene_id is a CharacterList, convert it to character to allow 
+> ## the joining below
+> if (is(rowData(st)$gene_id, "CharacterList")) {
++     if (any(vapply(rowData(st)$gene_id, length, 1) > 1)) {
++         warning("Some elements of rowData(st)$gene_id consisted of more than one",
++                 "object. Only the first one is retained.")
++     }
++     rowData(st)$gene_id <- vapply(rowData(st)$gene_id, function(w) w[[1]], "")
++ }
+> 
+> ## If rowData(st)$tx_id is of class integer, replace it with the tx_name 
+> ## column
+> if (is(rowData(st)$tx_id, "integer")) {
++     rowData(st)$tx_id <- rowData(st)$tx_name
++ }
+> 
+> ## Add gene information, e.g. gene_name, entrezid, ... (if provided) to
+> ## transcript-level SE
+> rowData(st) <- rowData(st) %>%
++     data.frame() %>%
++     dplyr::left_join(data.frame(rowData(sg))) %>%
++     DataFrame()
+Joining, by = "gene_id"
+> 
+> ## Change the row names in sg to have geneID__geneSymbol
+> rownames(sg) <- paste(rowData(sg)$gene_id, rowData(sg)$gene_name, sep = "__")
+> 
+> # Coerce the object from SummarizedExperiment to SingleCellExperiment
+> st <- as(st, "SingleCellExperiment")
+> sg <- as(sg, "SingleCellExperiment")
+> 
+> saveRDS(list(st = st, sg = sg), file = outrds)
+> 
+> sessionInfo()
+R version 3.6.0 (2019-04-26)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Debian GNU/Linux 9 (stretch)
+
+Matrix products: default
+BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.19.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=C             
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] SingleCellExperiment_1.6.0  SummarizedExperiment_1.14.1
+ [3] DelayedArray_0.10.0         BiocParallel_1.18.1        
+ [5] matrixStats_0.55.0          Biobase_2.44.0             
+ [7] GenomicRanges_1.36.1        GenomeInfoDb_1.20.0        
+ [9] IRanges_2.18.3              S4Vectors_0.22.1           
+[11] BiocGenerics_0.30.0         tximeta_1.2.2              
+[13] tximport_1.12.3             dplyr_0.8.3                
+[15] BiocManager_1.30.9         
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.2               lattice_0.20-38          prettyunits_1.0.2       
+ [4] Rsamtools_2.0.3          Biostrings_2.52.0        assertthat_0.2.1        
+ [7] zeallot_0.1.0            digest_0.6.22            BiocFileCache_1.8.0     
+[10] R6_2.4.0                 backports_1.1.5          RSQLite_2.1.2           
+[13] httr_1.4.1               pillar_1.4.2             zlibbioc_1.30.0         
+[16] rlang_0.4.1              GenomicFeatures_1.36.4   progress_1.2.2          
+[19] lazyeval_0.2.2           curl_4.2                 blob_1.2.0              
+[22] Matrix_1.2-17            readr_1.3.1              stringr_1.4.0           
+[25] ProtGenerics_1.16.0      RCurl_1.95-4.12          bit_1.1-14              
+[28] biomaRt_2.40.5           compiler_3.6.0           rtracklayer_1.44.4      
+[31] pkgconfig_2.0.3          tidyselect_0.2.5         tibble_2.1.3            
+[34] GenomeInfoDbData_1.2.1   XML_3.98-1.20            crayon_1.3.4            
+[37] dbplyr_1.4.2             GenomicAlignments_1.20.1 bitops_1.0-6            
+[40] rappdirs_0.3.1           grid_3.6.0               jsonlite_1.6            
+[43] DBI_1.0.0                AnnotationFilter_1.8.0   magrittr_1.5            
+[46] stringi_1.4.3            XVector_0.24.0           vctrs_0.2.0             
+[49] ensembldb_2.8.1          tools_3.6.0              bit64_0.9-7             
+[52] glue_1.3.1               purrr_0.3.3              hms_0.5.2               
+[55] AnnotationDbi_1.46.1     memoise_1.1.0           
+> date()
+[1] "Mon Nov 11 11:28:04 2019"
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+ 16.730   1.570  20.935 

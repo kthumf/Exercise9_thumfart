@@ -1,0 +1,136 @@
+[2019-11-11 11:27:34,107] multiqc                                            [DEBUG  ]  No MultiQC config found: /opt/conda/lib/python3.6/site-packages/multiqc_config.yaml
+[2019-11-11 11:27:34,109] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/rstudio/.multiqc_config.yaml
+[2019-11-11 11:27:34,111] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2019-11-11 11:27:34,111] multiqc                                            [DEBUG  ]  Command used: /opt/conda/bin/multiqc example_dataset/output/FastQC example_dataset/output/salmon example_dataset/output/FASTQtrimmed example_dataset/output/STAR -f -o example_dataset/output/MultiQC
+[2019-11-11 11:27:34,512] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.7
+[2019-11-11 11:27:34,512] multiqc                                            [INFO   ]  This is MultiQC v1.7
+[2019-11-11 11:27:34,513] multiqc                                            [DEBUG  ]  Command     : /opt/conda/bin/multiqc example_dataset/output/FastQC example_dataset/output/salmon example_dataset/output/FASTQtrimmed example_dataset/output/STAR -f -o example_dataset/output/MultiQC
+[2019-11-11 11:27:34,513] multiqc                                            [DEBUG  ]  Working dir : /home/rstudio/ARMOR
+[2019-11-11 11:27:34,513] multiqc                                            [INFO   ]  Template    : default
+[2019-11-11 11:27:34,514] multiqc                                            [INFO   ]  Searching 'example_dataset/output/FastQC'
+[2019-11-11 11:27:34,515] multiqc                                            [INFO   ]  Searching 'example_dataset/output/salmon'
+[2019-11-11 11:27:34,515] multiqc                                            [INFO   ]  Searching 'example_dataset/output/FASTQtrimmed'
+[2019-11-11 11:27:34,516] multiqc                                            [INFO   ]  Searching 'example_dataset/output/STAR'
+[2019-11-11 11:27:34,517] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, dedup, damageprofiler, picard, prokka, samblaster, samtools, bamtools, jellyfish, vcftools, longranger, stacks, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, minionqc, clusterflow, bcl2fastq, interop, flash
+[2019-11-11 11:27:34,518] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmp7ivg57cr
+[2019-11-11 11:27:34,690] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-3_R1_fastqc.html
+[2019-11-11 11:27:34,692] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-3_R1_trimmed_fastqc.html
+[2019-11-11 11:27:34,692] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-2_R1_fastqc.html
+[2019-11-11 11:27:34,692] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-1_R1_trimmed_fastqc.html
+[2019-11-11 11:27:34,692] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-1_R1_fastqc.html
+[2019-11-11 11:27:34,693] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-1_R1_fastqc.html
+[2019-11-11 11:27:34,693] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-2_R1_fastqc.html
+[2019-11-11 11:27:34,693] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-2_R1_trimmed_fastqc.html
+[2019-11-11 11:27:34,694] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-2_R1_trimmed_fastqc.html
+[2019-11-11 11:27:34,695] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-3_R1_trimmed_fastqc.html
+[2019-11-11 11:27:34,695] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-3_R1_fastqc.html
+[2019-11-11 11:27:34,695] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-1_R1_trimmed_fastqc.html
+[2019-11-11 11:27:37,467] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-2_R1_trimmed.fq.gz
+[2019-11-11 11:27:37,467] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-3_R1_trimmed.fq.gz
+[2019-11-11 11:27:37,484] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-2_R1_trimmed.fq.gz
+[2019-11-11 11:27:37,495] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-1_R1_trimmed.fq.gz
+[2019-11-11 11:27:37,538] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-1_R1_trimmed.fq.gz
+[2019-11-11 11:27:37,538] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-3_R1_trimmed.fq.gz
+[2019-11-11 11:27:37,554] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-2_R1_Aligned.sortedByCoord.out.bam
+[2019-11-11 11:27:37,556] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-2_R1_Aligned.sortedByCoord.out.bam.bai
+[2019-11-11 11:27:37,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-3_R1_Aligned.sortedByCoord.out.bam
+[2019-11-11 11:27:37,781] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-3_R1_Aligned.sortedByCoord.out.bam.bai
+[2019-11-11 11:27:37,986] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-3_R1_Aligned.sortedByCoord.out.bam
+[2019-11-11 11:27:38,216] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-3_R1_Aligned.sortedByCoord.out.bam.bai
+[2019-11-11 11:27:38,231] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-1_R1_Aligned.sortedByCoord.out.bam
+[2019-11-11 11:27:38,231] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-1_R1_Aligned.sortedByCoord.out.bam.bai
+[2019-11-11 11:27:38,694] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-1_R1_Aligned.sortedByCoord.out.bam
+[2019-11-11 11:27:38,695] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-unstim-1_R1_Aligned.sortedByCoord.out.bam.bai
+[2019-11-11 11:27:38,984] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-2_R1_Aligned.sortedByCoord.out.bam.bai
+[2019-11-11 11:27:38,985] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: WT-Chir-2_R1_Aligned.sortedByCoord.out.bam
+[2019-11-11 11:27:39,828] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2019-11-11 11:27:39,848] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2019-11-11 11:27:39,861] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2019-11-11 11:27:39,880] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2019-11-11 11:27:39,896] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2019-11-11 11:27:39,909] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2019-11-11 11:27:39,921] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2019-11-11 11:27:39,929] multiqc                                            [DEBUG  ]  No samples found: quast
+[2019-11-11 11:27:39,942] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2019-11-11 11:27:39,959] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2019-11-11 11:27:39,971] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2019-11-11 11:27:39,996] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2019-11-11 11:27:40,004] multiqc                                            [DEBUG  ]  No samples found: busco
+[2019-11-11 11:27:40,015] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2019-11-11 11:27:40,028] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2019-11-11 11:27:40,036] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2019-11-11 11:27:40,056] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2019-11-11 11:27:40,071] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2019-11-11 11:27:40,086] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2019-11-11 11:27:40,098] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2019-11-11 11:27:40,114] multiqc                                            [DEBUG  ]  No samples found: happy
+[2019-11-11 11:27:40,137] multiqc                                            [DEBUG  ]  No samples found: homer
+[2019-11-11 11:27:40,151] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2019-11-11 11:27:40,160] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2019-11-11 11:27:40,173] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2019-11-11 11:27:40,192] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2019-11-11 11:27:40,199] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2019-11-11 11:27:40,209] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2019-11-11 11:27:40,223] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2019-11-11 11:27:40,237] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2019-11-11 11:27:40,245] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2019-11-11 11:27:40,275] multiqc                                            [DEBUG  ]  No samples found: picard
+[2019-11-11 11:27:40,286] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2019-11-11 11:27:40,296] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2019-11-11 11:27:40,310] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2019-11-11 11:27:40,323] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2019-11-11 11:27:40,341] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2019-11-11 11:27:40,372] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2019-11-11 11:27:40,389] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2019-11-11 11:27:40,402] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2019-11-11 11:27:40,441] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2019-11-11 11:27:40,454] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2019-11-11 11:27:40,476] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2019-11-11 11:27:40,504] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2019-11-11 11:27:40,516] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2019-11-11 11:27:40,530] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2019-11-11 11:27:40,555] multiqc.modules.salmon.salmon                      [INFO   ]  Found 6 meta reports
+[2019-11-11 11:27:40,557] multiqc.modules.salmon.salmon                      [INFO   ]  Found 6 fragment length distributions
+[2019-11-11 11:27:40,581] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2019-11-11 11:27:40,592] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2019-11-11 11:27:40,621] multiqc.modules.star.star                          [INFO   ]  Found 6 reports
+[2019-11-11 11:27:40,648] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2019-11-11 11:27:40,659] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2019-11-11 11:27:40,670] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2019-11-11 11:27:40,680] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2019-11-11 11:27:40,687] multiqc                                            [DEBUG  ]  No samples found: kat
+[2019-11-11 11:27:40,695] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2019-11-11 11:27:40,704] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2019-11-11 11:27:40,712] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2019-11-11 11:27:40,733] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 6 reports
+[2019-11-11 11:27:40,754] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2019-11-11 11:27:40,762] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2019-11-11 11:27:40,770] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2019-11-11 11:27:40,778] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2019-11-11 11:27:40,786] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2019-11-11 11:27:40,795] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2019-11-11 11:27:40,807] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2019-11-11 11:27:40,815] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2019-11-11 11:27:41,789] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'WT-Chir-3_R1_fastqc.zip' as already parsed 'WT-Chir-3_R1'
+[2019-11-11 11:27:41,961] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'WT-unstim-2_R1_fastqc.zip' as already parsed 'WT-unstim-2_R1'
+[2019-11-11 11:27:42,193] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: WT-Chir-1_R1
+[2019-11-11 11:27:42,382] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'WT-Chir-2_R1_fastqc.zip' as already parsed 'WT-Chir-2_R1'
+[2019-11-11 11:27:42,383] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'WT-unstim-3_R1_fastqc.zip' as already parsed 'WT-unstim-3_R1'
+[2019-11-11 11:27:42,389] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: WT-unstim-1_R1
+[2019-11-11 11:27:42,566] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 6 reports
+[2019-11-11 11:27:42,799] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2019-11-11 11:27:42,808] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2019-11-11 11:27:42,818] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2019-11-11 11:27:42,827] multiqc                                            [DEBUG  ]  No samples found: interop
+[2019-11-11 11:27:42,836] multiqc                                            [DEBUG  ]  No samples found: flash
+[2019-11-11 11:27:42,856] multiqc                                            [INFO   ]  Compressing plot data
+[2019-11-11 11:27:43,100] multiqc                                            [INFO   ]  Report      : example_dataset/output/MultiQC/multiqc_report.html
+[2019-11-11 11:27:43,100] multiqc                                            [INFO   ]  Data        : example_dataset/output/MultiQC/multiqc_data
+[2019-11-11 11:27:43,102] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp7ivg57cr/multiqc_data/multiqc_data.json' to 'example_dataset/output/MultiQC/multiqc_data'
+[2019-11-11 11:27:43,102] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp7ivg57cr/multiqc_data/multiqc_cutadapt.txt' to 'example_dataset/output/MultiQC/multiqc_data'
+[2019-11-11 11:27:43,103] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp7ivg57cr/multiqc_data/multiqc_sources.txt' to 'example_dataset/output/MultiQC/multiqc_data'
+[2019-11-11 11:27:43,103] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp7ivg57cr/multiqc_data/multiqc_star.txt' to 'example_dataset/output/MultiQC/multiqc_data'
+[2019-11-11 11:27:43,103] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp7ivg57cr/multiqc_data/multiqc_general_stats.txt' to 'example_dataset/output/MultiQC/multiqc_data'
+[2019-11-11 11:27:43,104] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp7ivg57cr/multiqc_data/multiqc_fastqc.txt' to 'example_dataset/output/MultiQC/multiqc_data'
+[2019-11-11 11:27:43,104] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp7ivg57cr/multiqc_data/multiqc_salmon.txt' to 'example_dataset/output/MultiQC/multiqc_data'
+[2019-11-11 11:27:43,303] multiqc                                            [INFO   ]  MultiQC complete
